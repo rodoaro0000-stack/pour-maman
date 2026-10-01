@@ -127,7 +127,7 @@
         letterHint.textContent = 'Une lettre juste pour toi ✨';
         wait(finale, 2200);
       }
-    }, 19);
+    }, 55);
   }
 
   function showFullLetter() {
