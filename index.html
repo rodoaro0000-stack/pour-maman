@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#29292d">
+  <title>Pour Maman ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="state-idle">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div id="starsLayer" aria-hidden="true"></div>
+  <div id="sparkLayer" aria-hidden="true"></div>
+
+  <main class="experience">
+    <section class="scene scene-envelope" id="sceneEnvelope" aria-label="Une surprise pour maman">
+      <p class="eyebrow">UNE PETITE SURPRISE</p>
+
+      <button class="envelope" id="envelope" type="button" aria-label="Ouvrir la surprise">
+        <span class="env-back"></span>
+        <span class="env-glow"></span>
+        <span class="env-content">
+          <span class="mini-sparkle s1">✦</span>
+          <span class="mini-sparkle s2">✧</span>
+          <span class="flower">✿</span>
+          <strong>Pour Maman</strong>
+          <small>avec tout mon amour</small>
+        </span>
+        <span class="env-front"></span>
+        <span class="env-flap"></span>
+        <span class="env-seal">✦</span>
+      </button>
+
+      <p class="hint">Clique pour ouvrir</p>
+    </section>
+
+    <section class="scene scene-message" id="sceneMessage" aria-live="polite">
+      <p class="gold-label">POUR LA PLUS BELLE MAMAN</p>
+      <h1>Joyeux anniversaire<br><span>Maman</span> ✨</h1>
+      <p class="message-subtitle">Aujourd'hui, c'est toi qu'on célèbre.</p>
+    </section>
+
+    <section class="scene scene-letter" id="sceneLetter" aria-label="Lettre pour maman">
+      <article class="letter-card" id="letterCard" tabindex="0">
+        <div class="letter-top">
+          <span>À ma maman</span>
+          <span class="letter-star">✦</span>
+        </div>
+        <div class="letter-body" id="letterBody"></div>
+        <p class="letter-hint" id="letterHint">Clique sur la lettre pour la lire ✨</p>
+        <div class="signature">Avec tout mon amour,<br><strong>ton enfant</strong> ♡</div>
+      </article>
+    </section>
+
+    <section class="scene scene-finale" id="sceneFinale" aria-live="polite">
+      <div class="finale-sparkles" aria-hidden="true">
+        <span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span>
+      </div>
+      <p class="gold-label">POUR TOUJOURS</p>
+      <h2>Je t'aime,<br><span>Maman</span> 🤍</h2>
+      <p>Merci pour tout ce que tu es.</p>
+      <div class="finale-line"></div>
+    </section>
+  </main>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Mettre la musique en pause">♫ Musique</button>
+  <button class="replay" id="replayBtn" type="button">↻ Rejouer</button>
+  <audio id="bgMusic" preload="auto" loop src="You%20Say.mp3"></audio>
+  <div id="fxLayer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
