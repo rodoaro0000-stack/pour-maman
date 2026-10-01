@@ -119,15 +119,22 @@
     letterHint.style.display = '';
     const text = LETTER;
     let index = 0;
-    typingTimer = setInterval(() => {
-      letterBody.textContent += text[index++];
-      if (index >= text.length) {
-        clearInterval(typingTimer);
-        typingTimer = null;
-        letterHint.textContent = 'Une lettre juste pour toi ✨';
-        wait(finale, 2200);
-      }
-    }, 55);
+   typingTimer = setInterval(() => {
+  letterBody.textContent += text[index++];
+
+  // La carte suit automatiquement le texte qui apparaît.
+  letterCard.scrollTo({
+    top: letterCard.scrollHeight,
+    behavior: 'smooth'
+  });
+
+  if (index >= text.length) {
+    clearInterval(typingTimer);
+    typingTimer = null;
+    letterHint.textContent = 'Une lettre juste pour toi ✨';
+    wait(finale, 2200);
+  }
+}, 55);
   }
 
   function showFullLetter() {
